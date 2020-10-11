@@ -455,6 +455,7 @@ body {
   position: absolute;
   height: 700px;
   width: 700px;
+  z-index: -1;
 }
 .wrapper::before {
   top: 0;
@@ -673,15 +674,14 @@ body {
 .banner__info {
   width: 50%;
 }
-.banner__info {
+.banner__info-contanier {
   display: flex;
   align-items: flex-start;
 }
-.banner__info::after, .banner__info::before {
-  content: url("../images/svg/brace.svg");
-  width: 30px;
+.banner__info svg {
+  width: 5%;
 }
-.banner__info::after {
+.banner__info svg:nth-of-type(2) {
   transform: scale(-1, 1);
 }
 .banner__info-block {
@@ -698,7 +698,8 @@ body {
 }
 .banner__element {
   position: absolute;
-  top: 45%;
+  bottom: 0;
+  transform: translateY(50%);
   font-family: "Helvetica Bold", Arial, Helvetica, sans-serif;
   font-size: 52px;
   color: #99cc66;

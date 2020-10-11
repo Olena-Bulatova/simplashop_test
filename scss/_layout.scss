@@ -38,6 +38,7 @@ body {
     position: absolute;
     height: 700px;
     width: 700px;
+    z-index: -1;
   }
   
   &::before {

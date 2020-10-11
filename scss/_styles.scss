@@ -269,17 +269,18 @@
         width: 50%;
     }
 
-    &__info {        
-        display: flex;
-        align-items: flex-start;
+    &__info {
 
-        &::after,
-        &::before {
-            content: url('../images/svg/brace.svg');
-            width: 30px;
+        &-contanier {                    
+            display: flex;
+            align-items: flex-start; 
         }
 
-        &::after {
+        svg {
+            width: 5%;
+        }
+
+        svg:nth-of-type(2) {
             transform: scale(-1, 1);
         }
 
@@ -302,7 +303,8 @@
 
     &__element {
         position: absolute;
-        top: 45%;
+        bottom: 0;
+        transform: translateY(50%);
         font-family: "Helvetica Bold", Arial, Helvetica, sans-serif;
         font-size: 52px;
         color: #99cc66;

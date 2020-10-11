@@ -8,4 +8,14 @@ $(document).ready(function(){
         waitForAnimate: false,
     });
 
+    const svg = document.querySelectorAll('svg');
+
+    svg.forEach( item => {
+        item.addEventListener('load', event => {
+            let currentElement = event.target;
+            let parentHeight = currentElement.parentElement.clientHeight;
+            currentElement.setAttribute('height', `${parentHeight}px`);
+        })
+    })
+
 });
