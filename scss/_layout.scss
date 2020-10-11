@@ -1,0 +1,33 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: $baseFontColor;
+}
+
+a, input, button, li {
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $primaryBGColor;
+  background: $BGColor no-repeat;
+  font: 14px $primaryFont;
+  color: $baseFontColor;
+  height: 100%;
+}
+.wrapper {
+  padding: 30px 10%;
+  margin: 0 auto;
+}
+
+
+
