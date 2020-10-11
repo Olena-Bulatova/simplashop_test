@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ICON" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
     crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
     <title>COLAEES  &mdash; клиника медицинской косметологии</title>
 </head>
@@ -18,6 +20,10 @@
                 <img class="navbar__logo" src="./images/logo.png" alt="logo">
                 <p class="navbar__brand-name">клиника медицинской косметологии</p>
             </a>
+            <input id="burger" type="checkbox" class="burger-state"/>                
+            <label for="burger" class="burger-btn">
+                <span class="burger-btn__icon"></span>
+            </label>
             <ul class="navbar-nav">
                 <li class="navbar-nav__item">
                     <a class="navbar-nav__link" href="#">О клинике</a>
@@ -31,11 +37,8 @@
                         <li class="dropdown-menu__item">
                             <a class="dropdown-menu__link" href="#">Дерматология</a>
                         </li>
-                        <li class="dropdown-menu__item">
+                        <li class="dropdown-menu__item dropdown-menu__item_drop">
                             <a class="dropdown-menu__link" href="#">Дерматоонкология</a>
-                        </li>
-                        <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">Медицинская косметология</a>
                             <ul class="submenu">                    
                                 <li class="submenu__item">
                                     <a class="navbar-nav__link" href="#">Гемангиома лечение</a>
@@ -50,6 +53,9 @@
                                     <a class="navbar-nav__link" href="#">Лечение ксантелазм (ксантом)</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">Медицинская косметология</a>
                         </li>
                         <li class="dropdown-menu__item">
                             <a class="dropdown-menu__link" href="#">Венерология</a>
@@ -82,44 +88,42 @@
         </nav>
         <header class="banner">
             <div class="banner__slider" id="banner__slider">
-                <div class="banner__inner">
-                    <div class="banner__item banner__item_active" id="banner__item1">
-                        <div class="banner__info">
+                <div class="banner__item">
+                    <div class="banner__info">
+                        <div class="banner__info-block"> 
                             <h2 class="banner__title">Удаление папилом</h2>
                             <p class="banner__text">
-                                оплати единоразово 7&nbsp;процедур &mdash; получи скидку
+                                оплати единоразово 7 процедур &mdash; получи скидку
                                 <span class="banner__element">50%</span>
                             </p>
                         </div>
-                        <img class="banner__img" src="./images/girl.png" alt="First slide">
                     </div>
-                    <div class="banner__item" id="banner__item2">
-                        <div class="banner__info">
+                    <img class="banner__img" src="./images/girl.png" alt="First slide">
+                </div>
+                <div class="banner__item">
+                    <div class="banner__info">
+                        <div class="banner__info-block"> 
                             <h2 class="banner__title">Удаление папилом</h2>
                             <p class="banner__text">
-                                оплати единоразово 7&nbsp;процедур &mdash; получи скидку
+                                оплати единоразово 7 процедур &mdash; получи скидку
                                 <span class="banner__element">50%</span>
                             </p>
                         </div>
-                        <img class="banner__img" src="./images/girl.png" alt="Second slide">
                     </div>
-                    <div class="banner__item" id="banner__item3">
-                        <div class="banner__info">
+                    <img class="banner__img" src="./images/girl.png" alt="First slide">
+                </div>
+                <div class="banner__item">
+                    <div class="banner__info">
+                        <div class="banner__info-block"> 
                             <h2 class="banner__title">Удаление папилом</h2>
                             <p class="banner__text">
-                                оплати единоразово 7&nbsp;процедур &mdash; получи скидку
+                                оплати единоразово 7 процедур &mdash; получи скидку
                                 <span class="banner__element">50%</span>
                             </p>
                         </div>
-                        <img class="banner__img" src="./images/girl.png" alt="Third slide">
                     </div>
-                </div>                  
-                <ol class="banner__indicators-list">
-                    <li data-target="#banner__slider" data-slide-to="0" class="banner__indicator banner__indicator_active"></li>
-                    <li data-target="#banner__slider" data-slide-to="1" class="banner__indicator"></li>
-                    <li data-target="#banner__slider" data-slide-to="2" class="banner__indicator"></li>
-                </ol>
-            </div>
+                    <img class="banner__img" src="./images/girl.png" alt="First slide">
+                </div>
         </header>
         <main class="main-content">
             <section class="about-block">

@@ -27,6 +27,31 @@ body {
 .wrapper {
   padding: 30px 10%;
   margin: 0 auto;
+  background: url("../images/flower.png") no-repeat left bottom;
+  background-position-x: 10%;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: url("../images/svg/flower.svg");
+    position: absolute;
+    height: 700px;
+    width: 700px;
+  }
+  
+  &::before {
+    top: 0;
+    right: 0;
+    transform: translateX(75%) translateY(-50%);
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-70%) translateY(50%);
+  }
+
 }
 
 

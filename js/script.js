@@ -1,61 +1,11 @@
-$("#indicators li:first-child").addClass("active");
-
-function slide(target) {
-  $("#indicators li").removeClass("active").eq(target).addClass("active");
-  $("#slider ul li").animate({
-    'right': +350 * target + 'px'
-  }, 250);
-}
-
-$("#indicators li").click(function() {
-  var target = $(this).index();
-  slide(target);
-
-  //Stopped auto slide when user clicked
-  clearInterval(timer);
-  //Then started auto slide again
-  timer = setInterval(function() {
-    $('#next').trigger('click');
-  }, 2500);
+$(document).ready(function(){
+    $('.banner__slider').slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autospeed: 1500,
+        waitForAnimate: false,
+    });
 
 });
-
-$("#next").click(function() {
-  var target = $("#indicators li.active").index();
-  if (target === $("#indicators li").length - 1) {
-    target = -1;
-  }
-  target = target + 1
-  slide(target);
-
-  //Stopped auto slide when user clicked
-  clearInterval(timer);
-  //Then started auto slide again
-  timer = setInterval(function() {
-    $('#next').trigger('click');
-  }, 2500);
-
-});
-
-$("#prev").click(function() {
-  var target = $("#indicators li.active").index();
-  if (target === 0) {
-    target = $("#indicators li").length;
-  }
-  target = target - 1;
-  slide(target);
-
-  //Stopped auto slide when user clicked
-  clearInterval(timer);
-  //Then started auto slide again
-  timer = setInterval(function() {
-    $('#next').trigger('click');
-  }, 2500);
-
-});
-
-//Auto slide
-var timer = null;
-timer = setInterval(function() {
-  $('#next').trigger('click');
-}, 2500);
